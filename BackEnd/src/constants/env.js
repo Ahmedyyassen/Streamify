@@ -6,3 +6,4 @@ export const STREAM_API_SECRET = process.env.STREAM_API_SECRET;
 export const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 export const NODE_ENV = process.env.NODE_ENV;
 export const FRONT_END = process.env.FRONT_END_URL;
+export const LOCAL_URL = process.env.LOCAL_URL;

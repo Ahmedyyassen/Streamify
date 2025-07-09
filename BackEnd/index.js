@@ -7,7 +7,7 @@ import chatRoute from "./src/routes/chat.route.js";
 import { createServer } from "http";
 import connectDB from "./src/db/db.js";
 import cookieParser from "cookie-parser";
-import { FRONT_END, NODE_ENV, PORT } from "./src/constants/env.js";
+import { FRONT_END, LOCAL_URL, PORT } from "./src/constants/env.js";
 // import path from "path";
 
 import { errorHandler } from "./src/middleware/ErrorHandler.js";
@@ -17,7 +17,7 @@ const app = express();
 const server = createServer(app);
 
 app.use(cors({
-  origin: FRONT_END,
+  origin: [FRONT_END, LOCAL_URL],
   credentials: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 }));
