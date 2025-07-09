@@ -4,9 +4,9 @@ export const SERVER_HOST =
     : "/api";
 
 
-const AUTH = `${SERVER_HOST}/auth`;
-const CHAT = `${SERVER_HOST}/chat`;
-export const USER = `${SERVER_HOST}/users`;
+const AUTH = `${SERVER_HOST}/api/auth`;
+const CHAT = `${SERVER_HOST}/api/chat`;
+export const USER = `${SERVER_HOST}/api/users`;
 
 export const SIGNUP = `${AUTH}/signup`;
 export const LOGIN = `${AUTH}/login`;
