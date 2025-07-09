@@ -16,12 +16,11 @@ const app = express();
 // const __dirname = path.resolve();
 const server = createServer(app);
 
-app.use(
-  cors({
-    origin: [FRONT_END],
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: FRONT_END,
+  credentials: true,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+}));
 // app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(cookieParser());
