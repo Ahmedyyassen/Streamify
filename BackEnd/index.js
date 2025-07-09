@@ -1,16 +1,16 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import authRoute from "./routes/auth.route.js";
-import userRoute from "./routes/user.route.js";
-import chatRoute from "./routes/chat.route.js";
+import authRoute from "./src/routes/auth.route.js";
+import userRoute from "./src/routes/user.route.js";
+import chatRoute from "./src/routes/chat.route.js";
 import { createServer } from "http";
-import connectDB from "./db/db.js";
+import connectDB from "./src/db/db.js";
 import cookieParser from "cookie-parser";
-import { FRONT_END, NODE_ENV, PORT } from "./constants/env.js";
+import { FRONT_END, NODE_ENV, PORT } from "./src/constants/env.js";
 // import path from "path";
 
-import { errorHandler } from "./middleware/ErrorHandler.js";
+import { errorHandler } from "./src/middleware/ErrorHandler.js";
 
 const app = express();
 // const __dirname = path.resolve();
